@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Word Embeddings Demo
+=======
+# Wmbedding Demo
+>>>>>>> 06690d6 (feat: implement basic word vector api)
 
 ## Installation
 
@@ -34,11 +38,17 @@ docker-compose up
 
 This will start the application and the Opensearch container with two nodes and opensearch dashboards.
 
+<<<<<<< HEAD
 For python local development, we create a virtual environment and install the required packages.
 
 In other another terminal window:
 
 First make sure the venv is activated:
+=======
+In other another terminal window:
+
+make sure the venv is activated:
+>>>>>>> 06690d6 (feat: implement basic word vector api)
 
 ```bash
 source venv/bin/activate
