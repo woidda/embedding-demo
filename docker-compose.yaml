@@ -60,7 +60,22 @@ services:
     networks:
       - opensearch-net
 
-
+  api:
+    build:
+      context: .
+    ports:
+      - 8000:8000
+    environment:
+      - OPENSEARCH_HOST=opensearch-node1
+    env_file:
+      - .env
+    depends_on:
+      - opensearch-node1
+      - opensearch-node2
+    volumes:
+      - .:/opt/api
+    networks:
+      - opensearch-net
 
 volumes:
   opensearch-data1:
