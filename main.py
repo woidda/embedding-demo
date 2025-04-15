@@ -28,4 +28,4 @@ def search_reviews(text, n):
 @app.get("/open-ai-embeddings/search", tags=["open-ai-embeddings"])
 async def search(text: str) -> dict[str, Any]:
     # e.g. text = "whole wheat pasta"
-    return {"results": search_reviews(text, n=3)}
+    return {"results": search_reviews(text, n=10)}

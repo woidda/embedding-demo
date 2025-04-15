@@ -1,0 +1,24 @@
+[project]
+name = "embedding-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "langchain",
+    "langchain-openai",
+    "openai",
+    "opensearch-py",
+    "pre-commit",
+    "pyopenssl",
+    "python-dotenv",
+    "ruff",
+    "streamlit>=1.44.1",
+    "uvicorn",
+]
+
+[dependency-groups]
+dev = [
+    "podman-compose>=1.3.0",
+]

@@ -1,9 +1,27 @@
 import json
 import csv
+import os
 
+from dotenv import load_dotenv
 from opensearchpy import helpers
 
-from opensearch_client import client
+from opensearchpy import OpenSearch
+
+# Load environment variables from .env file
+load_dotenv()
+
+host = os.environ.get("OPENSEARCH_HOST", "localhost")
+port = os.environ.get("OPENSEARCH_PORT", 9200)
+auth = ("admin", os.environ.get("OPENSEARCH_INITIAL_ADMIN_PASSWORD"))
+
+client = OpenSearch(
+    hosts=[{"host": host, "port": port}],
+    http_auth=auth,
+    use_ssl=True,  # Assuming HTTPS based on previous setup
+    verify_certs=False,  # For self-signed certs (like curl -k)
+    ssl_show_warn=False,  # Suppress SSL warnings in Streamlit app
+)
+
 
 csv_file_path = "./data/fine_food_reviews_with_embeddings_1k.csv"
 
