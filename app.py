@@ -130,4 +130,4 @@ elif st.session_state.last_query and not submitted:
 
 # Optional Footer
 st.markdown("---")
-st.caption("Powered by FastAPI, OpenSearch & OpenAI Embeddings")
+st.caption("Powered by FastAPI, OpenSearch & OpenAI Embeddings. Products are based on Amazon Fine Food Reviews dataset (subset)")
