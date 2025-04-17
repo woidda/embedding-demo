@@ -52,7 +52,7 @@ def truncate_text(text: str, max_length: int) -> str:
 
 # --- Streamlit App Layout ---
 # <<< Set layout to wide >>>
-st.set_page_config(page_title="Semantic Search", layout="wide")
+st.set_page_config(page_title="Semantic Product Search", layout="wide", page_icon="✨")
 
 st.title("✨ Semantic Product Search")
 st.caption("Enter a query to find semantically similar items in the OpenSearch index.")
